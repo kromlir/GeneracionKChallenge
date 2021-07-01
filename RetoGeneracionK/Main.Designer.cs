@@ -49,6 +49,7 @@
             this.buttonDecrypt.TabIndex = 0;
             this.buttonDecrypt.Text = "Desencriptar";
             this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.buttonDecrypt_Click);
             // 
             // groupBox1
             // 
