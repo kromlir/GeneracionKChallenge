@@ -33,9 +33,10 @@
             this.textBoxPathDecrypt = new System.Windows.Forms.TextBox();
             this.buttonFileDecrypt = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.openFileDialogDecrypt = new System.Windows.Forms.OpenFileDialog();
             this.textBoxPathKey = new System.Windows.Forms.TextBox();
             this.buttonPathKey = new System.Windows.Forms.Button();
+            this.openFileDialogDecrypt = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialogKey = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -88,10 +89,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select File With Key";
             // 
-            // openFileDialogDecrypt
-            // 
-            this.openFileDialogDecrypt.FileName = "openFileDialogDecrypt";
-            // 
             // textBoxPathKey
             // 
             this.textBoxPathKey.Location = new System.Drawing.Point(6, 56);
@@ -107,6 +104,15 @@
             this.buttonPathKey.TabIndex = 2;
             this.buttonPathKey.Text = "Select File";
             this.buttonPathKey.UseVisualStyleBackColor = true;
+            this.buttonPathKey.Click += new System.EventHandler(this.buttonPathKey_Click);
+            // 
+            // openFileDialogDecrypt
+            // 
+            this.openFileDialogDecrypt.FileName = "openFileDialogDecrypt";
+            // 
+            // openFileDialogKey
+            // 
+            this.openFileDialogKey.FileName = "openFileDialogKey";
             // 
             // Main
             // 
@@ -136,6 +142,7 @@
         private System.Windows.Forms.TextBox textBoxPathDecrypt;
         private System.Windows.Forms.TextBox textBoxPathKey;
         private System.Windows.Forms.Button buttonPathKey;
+        private System.Windows.Forms.OpenFileDialog openFileDialogKey;
     }
 }
 

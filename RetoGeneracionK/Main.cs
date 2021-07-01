@@ -13,19 +13,35 @@ namespace RetoGeneracionK
 {
     public partial class Main : Form
     {
-        decrypterEngine toDecrypt = new decrypterEngine();
+        DecrypterEngine toDecrypt = new DecrypterEngine();
+        String FilePath;
+        FileReader fileReader = new FileReader();
+
         public Main()
         {
             InitializeComponent();
-            
         }
         private void buttonFileDecrypt_Click(object sender, EventArgs e)
         {
             if (openFileDialogDecrypt.ShowDialog() == DialogResult.OK)
             {
-                
+                FilePath = openFileDialogDecrypt.FileName;
 
-                toDecrypt.DataToDecrypt = ;
+                toDecrypt.DataToDecrypt = fileReader.readData(FilePath);
+
+                textBoxPathDecrypt.Text = openFileDialogDecrypt.FileName.ToString();
+            }
+        }
+
+        private void buttonPathKey_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogKey.ShowDialog() == DialogResult.OK)
+            {
+                FilePath = openFileDialogKey.FileName;
+
+                toDecrypt.KeyToDecrypt = fileReader.readData(FilePath);
+
+                textBoxPathKey.Text = openFileDialogKey.FileName.ToString();
             }
         }
     }

@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="decrypterEngine.cs" />
+    <Compile Include="DecrypterEngine.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
