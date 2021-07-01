@@ -44,5 +44,12 @@ namespace RetoGeneracionK
                 textBoxPathKey.Text = openFileDialogKey.FileName.ToString();
             }
         }
+
+        private void buttonDecrypt_Click(object sender, EventArgs e)
+        {
+            String decryptedMessage = "";
+
+            MessageBox.Show("The answer is: " + decryptedMessage);
+        }
     }
 }
